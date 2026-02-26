@@ -10,6 +10,8 @@ def epi2d(restored: np.ndarray, reference: np.ndarray, alpha: float = 0.5, eps: 
     
     Returns:
         EPI value
+
+    original code: https://www.mathworks.com/matlabcentral/fileexchange/65261-edge-preservation-index-new-file/files/EPI_new.m
     """
     k = _laplacian_kernel(alpha)
     d_ref = convolve2d(reference, k, mode='same', boundary='symm')
